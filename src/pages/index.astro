@@ -1,6 +1,7 @@
 ---
 import type { PageTitel } from '../types'
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Greeting from '../components/Greeting.jsx';
 const pageTitel : PageTitel = {
 	titel: "Home",
 };
@@ -8,4 +9,5 @@ const pageTitel : PageTitel = {
 
 <BaseLayout {...pageTitel}>
 	<h2>My awesome blog subtitle</h2>
+	<Greeting client:load messages={["Hi", "Hello", "Howdy", "Hey there"]} />
 </BaseLayout>
