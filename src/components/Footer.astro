@@ -1,0 +1,25 @@
+---
+import Social from './Social.astro';
+import type { SocialInfo } from '../types';
+
+const githubProps: SocialInfo = {
+  platform: "github",
+  username: "lordponchik"
+}
+const linkedinProps: SocialInfo = {
+  platform: "linkedin",
+  username: "in/denys-strashniuk"
+}
+---
+<style>
+  footer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+</style>
+
+<footer>
+ <Social  {...githubProps}/>
+ <Social {...linkedinProps}/>
+</footer>

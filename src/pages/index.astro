@@ -1,18 +1,11 @@
 ---
-import '../styles/global.css';
-
-const pageTitel: string = "Home";
+import type { PageTitel } from '../types'
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitel : PageTitel = {
+	titel: "Home",
+};
 ---
-<html lang="de">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>{pageTitel}</title>
-  </head>
-  <body>
-	<a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
-    <h1>{pageTitel}</h1>
-  </body>
-</html>
+
+<BaseLayout {...pageTitel}>
+	<h2>My awesome blog subtitle</h2>
+</BaseLayout>
